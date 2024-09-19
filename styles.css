@@ -20,7 +20,15 @@ body, h1, h2, p, input, button, textarea, select {
 
 /* Basic styles */
 body {
-    --s: 25vmin;
+    background-image: url(whatsapp2.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 100vh; /* Ensures the body takes full viewport height */
+    margin: 0; /* Remove default margin */
+    padding-top: 62px;
+    /* --s: 25vmin;
     --p: calc(var(--s) / 2);
     --c1: rgb(0, 0, 0);
     --c2: rgb(0, 16, 158);
@@ -55,7 +63,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 }
 
 /* Keyframes for background color and position animation */
@@ -117,6 +125,8 @@ body {
         animation: none;
     }
 }
+
+
 
 /* Header styles */
 header {
@@ -195,6 +205,7 @@ main {
     max-width: 1200px;
     margin: auto;
     flex: 1;
+    padding-top: 100px;
 }
 
 .page-content {
@@ -206,7 +217,15 @@ h2 {
     color: #fff;
 }
 
+
+
+.attendance-heading {
+    margin-top: 60px; /* Add top margin to push the heading down */
+    /* ... (rest of the styles remain the same) ... */
+}
+
 /* Specific styles for Attendance Page heading */
+
 .attendance-heading {
     color: #fff;
     font-size: 50px;
@@ -387,6 +406,7 @@ button:hover {
     animation: gradientTextAnimation 5s ease infinite;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 60px;
 }
 
 @keyframes gradientTextAnimation {
@@ -401,11 +421,20 @@ button:hover {
     }
 }
 
-.events-container {
+.nav-container .checkbox,
+.nav-container .hamburger-lines {
+    top: 10px; /* Adjust this value as needed */
+}
+
+/* .events-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 2rem;
+    max-width: min-content;
+} */
+.events-container {
+    margin-top: 20px; /* Add spacing above the events section */
 }
 
 .event-card {
@@ -415,7 +444,8 @@ button:hover {
     border-radius: 8px;
     padding: 1rem;
     width: 300px;
-    margin: 1rem;
+    margin-left: 400px;
+    /* margin: 1rem; */
     color: #fff; /* White text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
@@ -439,9 +469,64 @@ button:hover {
     text-align: center;
 }
 
-.events-table-container {
-    overflow-x: auto;
+#events-table {
+    width: 60%;
+    margin-left: 100px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
 }
+
+.events-table-container {
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+}
+#events-body {
+    width: 200px;
+}
+
+/* event calender  */
+.calendar-container {
+    margin: 20px 0;
+    margin-left: 401px;
+}
+
+.calendar-container input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.events-table-container {
+    margin-top: 20px;
+}
+
+.events-table-heading {
+    margin-bottom: 10px;
+}
+
+.events-table-container table {
+    width: 100%;
+    
+}
+
+.events-table-container th, .events-table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.delete-event {
+    background-color: #ff4d4d; /* Red button for delete */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-event:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
 
 #events-table {
     width: 100%;
@@ -529,6 +614,18 @@ button:hover {
         text-align: left;
     }
 }
+.list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin-top: 85px; /* Adjust this value to shift the list down */
+}
+
+.list li {
+    display: inline; /* or inline-block for spacing */
+    margin-right: 15px; /*Adjust spacing between buttons */
+}
+
+
 .logo {
     width: 50px;
   }
@@ -600,12 +697,17 @@ button:hover {
     
     position: absolute;
     top: 40px;
-    right: 30px;
+    right: 435px;
     color: red
   }
   .navbar {
     list-style-type: none;
     padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   
   .navbar li {
@@ -769,7 +871,7 @@ button:hover {
     align-items: center;
     background-color: #fee6e3;
     border: 2px solid #111;
-    border-radius: 50px;
+    border-radius: 10px;
     box-sizing: border-box;
     color: #111;
     cursor: pointer;
@@ -789,9 +891,10 @@ button:hover {
     touch-action: manipulation;
   }
   
+  
   .button-56:after {
     background-color: #111;
-    border-radius: 8px;
+    border-radius: 5px;
     content: "";
     display: block;
     height: 48px;
@@ -823,11 +926,11 @@ button:hover {
     }
   }
   .amp {
-    width: 200px; /* Adjust this value as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures the image is treated as a block element */
-    margin: 0 auto; /* Centers the logo if it's smaller than its container */
-    border-radius: 80px; /* Adds rounded corners */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    flex: 1;
+    padding-top: 100px; 
 }
 .h1 {
     margin-left: 650px;
