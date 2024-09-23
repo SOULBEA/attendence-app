@@ -713,7 +713,7 @@ button:hover {
 }
 
 .open-btn {
-    position: absolute;
+    position: fixed;
     top: 43px;
     left: 56px;
     color: rgb(255, 255, 255)
